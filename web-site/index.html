@@ -9,47 +9,50 @@
 <body class="bg-gray-50 min-h-screen flex flex-col items-center p-6">
 
   <header class="mb-8 text-center">
-    <h1 class="text-3xl font-bold mb-2">รายงานการพัฒนาโมเดลการเรียนรู้ของเครื่อง</h1>
+    <h1 class="text-3xl font-bold mb-2">โมเดลการเรียนรู้ของเครื่อง</h1>
     <h2 class="text-xl text-gray-700">ทำนายอุณหภูมิพื้นผิวโลกจากปัจจัยสิ่งแวดล้อมของประเทศต่างๆ</h2>
   </header>
 
   <main class="w-full max-w-lg bg-white rounded-lg shadow-lg p-6">
+    <div>
+        <p class="text-gray-600 mb-4">กรุณากรอกข้อมูลปัจจัยสิ่งแวดล้อมที่เกี่ยวข้อง</p>
+        <p class="text-sm text-gray-500">หมายเหตุ: ค่าที่กรอกคือจำนวนของก๊าซที่ปล่อยออกมาต่อปี (ตัน)</p>
+    </div>
     <form id="predictForm" class="space-y-4">
-
       <!-- Input fields -->
       <div>
         <label for="CO2_coal" class="block font-medium mb-1">CO2 coal</label>
-        <input type="number" step="any" id="CO2_coal" name="CO2 coal" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="เช่น 123.4" />
+        <input type="number" step="any" id="CO2_coal" name="CO2 coal" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="เช่น 123" />
       </div>
 
       <div>
         <label for="CO2_oil" class="block font-medium mb-1">CO2 oil</label>
-        <input type="number" step="any" id="CO2_oil" name="CO2 oil" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="เช่น 56.7" />
+        <input type="number" step="any" id="CO2_oil" name="CO2 oil" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="เช่น 56" />
       </div>
 
       <div>
         <label for="CO2_gas" class="block font-medium mb-1">CO2 gas</label>
-        <input type="number" step="any" id="CO2_gas" name="CO2 gas" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="เช่น 89.0" />
+        <input type="number" step="any" id="CO2_gas" name="CO2 gas" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="เช่น 89" />
       </div>
 
       <div>
         <label for="CO2_cement" class="block font-medium mb-1">CO2 cement</label>
-        <input type="number" step="any" id="CO2_cement" name="CO2 cement" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="เช่น 12.3" />
+        <input type="number" step="any" id="CO2_cement" name="CO2 cement" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="เช่น 12" />
       </div>
 
       <div>
         <label for="CO2_flaring" class="block font-medium mb-1">CO2 flaring</label>
-        <input type="number" step="any" id="CO2_flaring" name="CO2 flaring" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="เช่น 4.5" />
+        <input type="number" step="any" id="CO2_flaring" name="CO2 flaring" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="เช่น 4" />
       </div>
 
       <div>
         <label for="methane" class="block font-medium mb-1">methane</label>
-        <input type="number" step="any" id="methane" name="methane" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="เช่น 300.1" />
+        <input type="number" step="any" id="methane" name="methane" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="เช่น 300" />
       </div>
 
       <div>
         <label for="N2O" class="block font-medium mb-1">N2O</label>
-        <input type="number" step="any" id="N2O" name="N2O" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="เช่น 78.9" />
+        <input type="number" step="any" id="N2O" name="N2O" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="เช่น 78" />
       </div>
 
       <button type="submit" class="w-full bg-black text-white font-semibold py-3 rounded hover:bg-gray-600 transition">ทำนายอุณหภูมิ</button>
